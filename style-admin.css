@@ -976,3 +976,49 @@ td,
     font-size: 0.8rem;
   }
 }
+
+.app-oculta {
+  visibility: hidden;
+}
+
+.pantalla-carga {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #12332f 0%, #061517 55%, #031012 100%);
+}
+
+.loader-card {
+  width: min(360px, calc(100% - 40px));
+  padding: 34px;
+  border-radius: 24px;
+  text-align: center;
+  background: rgba(15, 35, 39, 0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #f8fafc;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.loader-logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: #0b7c70;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.loader-card strong {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.loader-card span {
+  color: #bdd6d1;
+}
