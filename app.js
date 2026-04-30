@@ -983,6 +983,12 @@ onAuthStateChanged(auth, async (user) => {
     const ref = doc(db, "usuarios", user.uid);
     const snap = await getDoc(ref);
 
+    const pantallaCarga = document.getElementById("pantallaCarga");
+    const app = document.querySelector(".app");
+
+    if (pantallaCarga) pantallaCarga.style.display = "none";
+    if (app) app.classList.remove("app-oculta");
+
     if (!snap.exists()) {
       window.location.href = "./login.html";
       return;
